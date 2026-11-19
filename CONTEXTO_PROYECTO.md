@@ -175,6 +175,7 @@ Table project_transitions {
 Table project_schedules {
   id uuid [pk]
   project_id uuid [not null, ref: > projects.id]
+  icono text
   day_of_week smallint [not null] // 1=Lun ... 7=Dom (ISO-8601)
   preferred_start_time time
   allocated_minutes int [not null]
